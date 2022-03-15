@@ -1,5 +1,5 @@
 import React from "react";
-import {Routes, Route, Link} from 'react-router-dom';
+import {Routes, Route} from 'react-router-dom';
 import Home from "./home/Home";
 import About from "./about/About";
 import Contact from "./contact/Contact";
@@ -12,11 +12,11 @@ function Content(){
     return (
         <div>
             <Routes>
-                <Route path="/" element={<Home />}/>
-                <Route path="/about" element={<About />}/>
-                <Route path="/contact" element={<Contact />}/>
-                <Route path="/tool" element={<Tool />}/>
-                <Route path="/kura" element={<Kura />}/>
+                <Route exact path="/" element={<Home />}/>
+                <Route exact path="/about" element={<About />}/>
+                <Route exact path="/contact" element={<Contact />}/>
+                <Route exact path="/tool" element={<Tool />}/>
+                <Route exact path="/kura" element={<Kura />}/>
             </Routes>
         </div>
     );

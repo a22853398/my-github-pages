@@ -1,7 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { NavbarData } from "./NavbarData";
-import { Routes, Route, Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+//import './Navbar.css';
+
 
 const NavbarNav = styled.nav(
     {
@@ -20,18 +22,22 @@ const NavbarUl = styled.ul(
         flexDirection: 'row',
         margin: '0%',
         padding: '0%',
+        
     }
 );
 
-const NavbarLink = styled(Link)`
+
+
+const NavbarLink = styled(NavLink)`
+    
     text-decoration: none;
     color: black;
-    padding: 1% 1%;
+    padding: 0.75% 1%;
     &:hover { // <Thing> when hovered
         color: white; 
         background-color: darkgreen;
     }
-    &:active {
+    &.active {
         color: white;
         background-color: darkgreen;
     }
@@ -48,15 +54,22 @@ const NavbarLi = styled.li(
     }
 );
 
+
+
+
 function Navbar(){
+    
     return(
         <NavbarNav>
             <NavbarUl>
                 {
                     NavbarData.map((value, key) => {
                         return(
-                            <NavbarLink key={key} to={value.url}>
-                                <NavbarLi >
+                            <NavbarLink 
+                                key={key} 
+                                to={value.url} 
+                            >
+                                <NavbarLi>
                                     {value.icon}{value.title}                                
                                 </NavbarLi>
                             </NavbarLink>
@@ -66,6 +79,18 @@ function Navbar(){
             </NavbarUl>
         </NavbarNav>
     );
-
 }
 export default Navbar;
+
+/*
+    <NavbarLink to="/" className="active">
+        <NavbarLi>
+            ホーム
+        </NavbarLi>
+        </NavbarLink>
+    <NavbarLink to="/about" className="">
+        <NavbarLi>
+            プロフィール
+        </NavbarLi>
+    </NavbarLink>
+*/
