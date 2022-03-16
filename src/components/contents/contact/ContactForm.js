@@ -5,9 +5,10 @@ import { useForm, ValidationError } from '@formspree/react';
 function ContactForm() {
   const [state, handleSubmit] = useForm("xgedzydp");
   if (state.succeeded) {
-      return <p>Thanks for joining!</p>;
+      return <p>お問い合わせいただき、誠にありがとうございます。</p>;
   }
   return (
+      <div>
       <form onSubmit={handleSubmit}>
       <label htmlFor="email">
         Email Address
@@ -35,6 +36,7 @@ function ContactForm() {
         Submit
       </button>
     </form>
+    </div>
   );
 }
 export default ContactForm;

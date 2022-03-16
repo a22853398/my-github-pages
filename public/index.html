@@ -24,6 +24,16 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
+    <!--Google reCaptcha v3-->
+    <script src="https://www.google.com/recaptcha/api.js?render=6Le-L-UeAAAAAHTwYgKTUELod_V8V8wzQizK6NN4"></script>
+    <script>
+      grecaptcha.ready(function () {
+        grecaptcha.execute('6Le-L-UeAAAAAHTwYgKTUELod_V8V8wzQizK6NN4', {action: 'submit'}).then(function (token) {
+          console.info("got token: " + token);
+            document.getElementById('g-recaptcha-response').value = token;
+        });
+      });
+    </script>
     <title>いこうの駆け出しサイト</title>
   </head>
   <body>
