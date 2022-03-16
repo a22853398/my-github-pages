@@ -3,7 +3,7 @@ import React from "react";
 export const AboutData = [
     {
         title: "名前",
-        content: "頼威宏"
+        content: "頼威宏。本名ですけど、公開して危ないですか？"
     },
     {
         title: "フリガナ",
@@ -34,6 +34,6 @@ export const AboutData = [
 export const SelfIntroduction = [
     {
         title: "自己紹介",
-        content: "完全に文系エンジニアです。\n最近、エンジニア歴2年目に突入しましたが、\n自分の学の浅はかさに恥を感じる日々を送っています"
+        content: "完全に文系エンジニアです。\n最近、エンジニア歴2年目に突入しましたが、\n自分の学の浅はかさに恥を感じる日々を送っています。"
     },
 ];

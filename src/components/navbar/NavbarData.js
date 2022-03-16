@@ -1,6 +1,6 @@
 import React from "react";
 import {AiOutlineHome, AiOutlineTool, AiOutlineMail} from "react-icons/ai";
-import {HiOutlineOfficeBuilding} from "react-icons/hi";
+import {BiBuilding} from "react-icons/bi";
 import {CgProfile} from "react-icons/cg";
 
 export const NavbarData = [
@@ -16,7 +16,7 @@ export const NavbarData = [
     },
     {
         title: '貯蔵庫',
-        icon: <HiOutlineOfficeBuilding />,
+        icon: <BiBuilding />,
         url: '/kura'
     },
     {
