@@ -2,11 +2,20 @@
 // For more help visit https://formspr.ee/react-help
 import React from 'react';
 import { useForm, ValidationError } from '@formspree/react';
+import Recaptcha from 'react-google-recaptcha';
+
+const mystiekey = "6LeSYeUeAAAAABGdt9EA6DP3VLnItZVYu2WBT0vJ";
+function onMyChange(value){
+  console.log('Captcha value', value);
+}
+
 function ContactForm() {
   const [state, handleSubmit] = useForm("xgedzydp");
   if (state.succeeded) {
       return <p>お問い合わせいただき、誠にありがとうございます。</p>;
   }
+  
+
   return (
       <div>
       <form onSubmit={handleSubmit}>
@@ -32,6 +41,7 @@ function ContactForm() {
         field="message"
         errors={state.errors}
       />
+      <Recaptcha sitekey={mystiekey} onChange={onMyChange}/>
       <button type="submit" disabled={state.submitting}>
         Submit
       </button>

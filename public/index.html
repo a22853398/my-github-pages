@@ -25,7 +25,7 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <!--Google reCaptcha v3-->
-    <script src="https://www.google.com/recaptcha/api.js?render=6Le-L-UeAAAAAHTwYgKTUELod_V8V8wzQizK6NN4"></script>
+    <!--script src="https://www.google.com/recaptcha/api.js?render=6Le-L-UeAAAAAHTwYgKTUELod_V8V8wzQizK6NN4"></script>
     <script>
       grecaptcha.ready(function () {
         grecaptcha.execute('6Le-L-UeAAAAAHTwYgKTUELod_V8V8wzQizK6NN4', {action: 'submit'}).then(function (token) {
@@ -33,7 +33,9 @@
             document.getElementById('g-recaptcha-response').value = token;
         });
       });
-    </script>
+    </script-->
+    <!--Google Recaptcha v2-->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <title>いこうの駆け出しサイト</title>
   </head>
   <body>
