@@ -2,8 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { NavbarData } from "./NavbarData";
 import { NavLink } from "react-router-dom";
-//import './Navbar.css';
-
 
 const NavbarNav = styled.nav(
     {

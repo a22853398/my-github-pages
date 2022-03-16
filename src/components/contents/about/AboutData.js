@@ -1,4 +1,3 @@
-import React from "react";
 
 export const AboutData = [
     {
@@ -15,7 +14,7 @@ export const AboutData = [
     },
     {
         title: "最終学歴",
-        content: "台湾東部の東華大学の文学部"
+        content: "台湾東部の東華大学の文学部。地方の国立大学"
     },
     {
         title: "好きなもの",

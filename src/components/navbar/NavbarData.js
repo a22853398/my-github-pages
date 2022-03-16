@@ -15,7 +15,7 @@ export const NavbarData = [
         url: '/tool'
     },
     {
-        title: '貯蔵庫',
+        title: '保管庫',
         icon: <BiBuilding />,
         url: '/kura'
     },

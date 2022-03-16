@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import profile_pic from "../../../images/profile_pic.jpg";
 import { AboutData, SelfIntroduction } from "./AboutData";
-import { Link } from "react-router-dom";
+import { SponsorMailTo } from "./SponsorMailTo";
 
 
 const AboutDiv = styled.div(
@@ -44,13 +44,11 @@ const ProfileDiv = styled.div(
                 whiteSpace: 'pre-wrap',
                 borderBottom: '0.5px darkgreen dashed',
             }
-
         }
     }
 );
 
 const SupportDiv = styled.div`
-    
     padding: 2% 1% 1% 1%;
     bottom: 0;
     
@@ -91,10 +89,10 @@ function About(){
                 </ProfileDiv>
                 <SupportDiv>
                     <p>画像は&ensp;
-                        <Link to="../contact">robertchianing0534@gmail.com</Link>
+                        <SponsorMailTo email="robertchianing0534@gmail.com">robertchianing0534@gmail.com</SponsorMailTo>
                         &ensp;の方が描いてくれました<br/>
                         イラスト制作依頼は
-                        <Link to="../contact">そちら</Link>
+                        <SponsorMailTo email="robertchianing0534@gmail.com">そちら</SponsorMailTo>
                         にご連絡ください
                     </p>
                 </SupportDiv>

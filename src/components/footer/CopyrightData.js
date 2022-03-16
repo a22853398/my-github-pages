@@ -1,6 +1,5 @@
 import React from "react";
-import {AiOutlineCopyright, AiOutlineCopyrightCircle} from 'react-icons/ai';
-import {FaRegCopyright} from 'react-icons/fa';
+import {AiOutlineCopyright, } from 'react-icons/ai';
 
 export const CopyrightData = [
     {

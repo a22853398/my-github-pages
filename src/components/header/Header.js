@@ -4,8 +4,8 @@ import HeaderTitle from "./HeaderTitle";
 import profileIcon from "../../images/profile_icon.png";
 import styled from "styled-components";
 
-import { Route, Routes, Link } from "react-router-dom";
-import Home from "../contents/home/Home";
+import { Link } from "react-router-dom";
+
 
 //header区画のstyle
 const HeaderDiv = styled.div(
