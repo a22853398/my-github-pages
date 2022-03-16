@@ -1,27 +1,59 @@
 import React from "react";
 import styled from "styled-components";
 import profile_pic from "../../../images/profile_pic.jpg";
+import { AboutData, SelfIntroduction } from "./AboutData";
+import { Link } from "react-router-dom";
+
 
 const AboutDiv = styled.div(
     {
         display: 'flex',
         flexDirection: 'row',
-        alignItems: 'center',
+        alignItems: 'start',
         justifyContent: 'center',
-
         width: '100%',
-        backgroundColor: 'skyblue'
     }
 );
 const PicDiv = styled.div`
-    border: 1px solid black;
+    padding: 1% 0%;
 `;
 const StyledPic = styled.img`
-    height: 60%;
+    height: 500px;
 `;
-const ProfileDiv = styled.div`
-    border: 1px solid black;
+const TextDiv = styled.div`
     height: 100%;
+    width: 50%;
+`;
+
+const ProfileDiv = styled.div(
+    {
+        padding: '1% 0%',
+        "& table":{
+            width: '100%',
+            "& th":{
+                textAlign: "left",
+                padding: '1% 1% 1% 2%',
+                fontSize: '1.3rem',
+                width: '20%',
+                whiteSpace: 'nowrap',
+                borderBottom: '0.5px darkgreen dashed',
+            },
+            "& td":{
+                verticalAlign: 'middle',
+                width: 'auto',
+                whiteSpace: 'pre-wrap',
+                borderBottom: '0.5px darkgreen dashed',
+            }
+
+        }
+    }
+);
+
+const SupportDiv = styled.div`
+    
+    padding: 2% 1% 1% 1%;
+    bottom: 0;
+    
 `;
 
 function About(){
@@ -30,23 +62,56 @@ function About(){
             <PicDiv>
                 <StyledPic src={profile_pic} />
             </PicDiv>
-            <ProfileDiv>
-                <ul>
-                    <li>名前：頼威宏</li>
-                    <li>フリガナ：ライウェイホン</li>
-                    <li>出身：タピオカミルクティが有名な国</li>
-                    <li>身長：175センチ</li>
-                    <li>体重：50~55キロ、増えたり減ったり</li>
-                    <li>最終学歴：台湾の東華大学文学部</li>
-                    <li>好きなもの：スマホゲームのガチャ、Steamゲーム、散歩、まったり、コードを見る（書くとは言ってない）、夢小説のような妄想</li>
-                    <li>嫌いなもの：ロボットでできる繰り返し作業</li>
-                    <li>自己PR：完全に文系エンジニアです。最近、エンジニア歴2年目に突入しましたが、自分の学の浅はかさに恥を感じる日々を送っています
-                    </li>
-                    <li>特技：プロフィールのような無駄な文を書くこと</li>
-                </ul>
-                <p>プロフィール画像は robertchianing0534@gmail.com の方が描いてくれました。イラスト制作依頼はこちらにご連絡ください</p>
-            </ProfileDiv>
+            <TextDiv>
+                <ProfileDiv>
+                    <table>
+                        <tbody>
+                        {
+                            AboutData.map((value, key) => {
+                                return(
+                                    <tr key={key}>
+                                        <th>{value.title}</th>
+                                        <td>{value.content}</td>
+                                    </tr>
+                                );
+                            })
+                        }
+                        {
+                            SelfIntroduction.map((value, key) => {
+                                return(
+                                    <tr key={key}>
+                                        <th>{value.title}</th>
+                                        <td>{value.content}</td>
+                                    </tr>
+                                );
+                            })
+                        }
+                        </tbody>
+                    </table>
+                </ProfileDiv>
+                <SupportDiv>
+                    <p>画像は&ensp;
+                        <Link to="../contact">robertchianing0534@gmail.com</Link>
+                        &ensp;の方が描いてくれました<br/>
+                        イラスト制作依頼は
+                        <Link to="../contact">そちら</Link>
+                        にご連絡ください
+                    </p>
+                </SupportDiv>
+            </TextDiv>
         </AboutDiv>
     );
 };
 export default About;
+//
+/*
+<SponsorMailTo 
+                            email={SponsorData.map((value, key) => {
+                                value.mail
+                            })}
+                            subject="イラスト制作依頼"
+                            body=""
+                        >
+                            robertchianing0534@gmail.com
+                        </SponsorMailTo>
+*/ 
