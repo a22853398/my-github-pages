@@ -7,13 +7,15 @@ import { SponsorMailTo } from "./SponsorMailTo";
 
 const AboutDiv = styled.div(
     {
+        width: '100%',
         display: 'flex',
         flexDirection: 'row',
         alignItems: 'start',
         justifyContent: 'center',
-        width: '100%',
     }
 );
+
+
 const PicDiv = styled.div`
     padding: 1% 0%;
 `;
