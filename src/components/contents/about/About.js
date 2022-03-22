@@ -92,10 +92,10 @@ function About(){
                 <SupportDiv>
                     <p>画像は&ensp;
                         <SponsorMailTo email="robertchianing0534@gmail.com">robertchianing0534@gmail.com</SponsorMailTo>
-                        &ensp;の方が描いてくれました<br/>
+                        &ensp;の方が描いてくれました。<br/>
                         イラスト制作依頼は
                         <SponsorMailTo email="robertchianing0534@gmail.com">そちら</SponsorMailTo>
-                        にご連絡ください
+                        にご連絡ください。
                     </p>
                 </SupportDiv>
             </TextDiv>

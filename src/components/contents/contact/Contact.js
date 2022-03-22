@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import ContactForm from "./ContactForm";
+import ContactMailTo from "./ContactMailTo";
+
 
 const ContactDiv = styled.div(
     {
@@ -20,10 +22,10 @@ function Contact(){
             
             <ContactForm />
             <div>
-                <p>上記のお問い合わせフォームは只今、formspreeのフリープランを利用しているため、<br/>
+                <p>上記のお問い合わせフォームは只今、<a href="https://formspree.io/" target="_blank" rel="noreferrer">formspree</a>&ensp;のフリープランを利用しているため、<br/>
                     お問い合わせいただいた内容が届かない場合がございます。<br/>
                     ご迷惑とお手数をお掛けして誠に申し訳ございません。<br/>
-                    もし三日内にこちらからの返事を頂いていない場合、u9908028@gmail.comにご連絡ください。<br/>
+                    もし三日内にこちらからの返事を頂いていない場合、<ContactMailTo email="u9908028@gmail.com" subject="" body="">u9908028@gmail.com</ContactMailTo>&ensp;にご連絡ください。<br/>
                 </p>
             </div>
         </ContactDiv>

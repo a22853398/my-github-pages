@@ -1,12 +1,17 @@
 import React from "react";
+import { PrivacyData } from "./PrivacyData";
+import PrivacyToggleButton from "./PrivacyToggleButton";
 
 function Privacy(){
     return(
         <div>
-            <h2>個人情報の使用</h2>
-            <h2>サイト訪問の情報収集</h2>
-            <h2></h2>
-            <h2>本サイト使用素材一覧</h2>
+            {
+                PrivacyData.map((value, key) => {
+                    return(
+                        <PrivacyToggleButton key={key} title={value.title} content={value.content}/>
+                    );
+                })
+            }
         </div>
     );
 }

@@ -1,6 +1,6 @@
 // Make sure to run npm install @formspree/react
 // For more help visit https://formspr.ee/react-help
-import React, { useState } from 'react';
+import React from 'react';
 import { useForm, ValidationError } from '@formspree/react';
 import Recaptcha from 'react-google-recaptcha';
 import styled from 'styled-components';
@@ -131,7 +131,7 @@ function ContactForm() {
           <Recaptcha sitekey={mystiekey} onChange={onMyChange}/>
         </RecaptchaDiv>
         <SubmitBtnDiv>
-          <button type='button'>  
+          <button type='button' >  
             プライバシーポリシー
           </button>
           <button type="submit" disabled={state.submitting}>
