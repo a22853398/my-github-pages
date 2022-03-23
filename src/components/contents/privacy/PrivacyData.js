@@ -1,49 +1,8 @@
-
-const sozai = ["自作イラスト"];
-const plugin = [
-    { title: "React Icons", url: "https://react-icons.github.io/react-icons/"},
-    { title: "React Router v6", url: "https://reactrouter.com/docs/en/v6/getting-started/overview"},
-    { title: "styled-components", url: "https://styled-components.com/"},
-    { title: "gh-pages", url: "https://www.npmjs.com/package/gh-pages"},
-    { title: "react-google-recaptcha v2", url: "https://www.npmjs.com/package/react-google-recaptcha"},
-];
-const outerService = [
-    { title: "Google Recaptcha v2", url: "https://www.google.com/recaptcha/about/"},
-    { title: "formspree", url: "https://formspree.io/"},
-]; 
-
-const referUrl = [
-    {
-        type: "お問い合わせフォーム",
-        refers: [
-            { title: "rrr", url: "rrr", },
-            { title: "rrr", url: "rrr", }
-        ]
-    },
-    {
-        type: "メニュー",
-        refers: {
-            title: "",
-            url: ""
-        }
-    },
-    {
-        type: "gh-pagesでのデプロイ",
-        refers: {
-            title: "",
-            url: ""
-        }
-    },
-    {
-        type: "CSS in Javascript",
-        refers: {
-            title: "",
-            url: ""
-        }
-    },
-];
-
-
+import React from "react";
+import PrivacyDataSozai from "./PrivacyDatas/PrivacyDataSozai";
+import PrivacyDataPlugin from "./PrivacyDatas/PrivacyDataPlugin";
+import PrivacyDataOuterService from "./PrivacyDatas/PrivacyDataOuterService";
+import PrivacyDataReferUrl from "./PrivacyDatas/PrivacyDataReferUrl";
 
 export const PrivacyData = [
     {
@@ -80,14 +39,17 @@ export const PrivacyData = [
         title: "本サイト使用素材一覧",
         content: <ul>
                     {
-                        sozai.map((value, key) => {
+                        PrivacyDataSozai.map((value, key) => {
                             return(
                                 <li key={key}>
-                                    {value}     
+                                    <a target="_blank"
+                                        rel="noreferrer"
+                                        href={value.url}>
+                                        {value.title}
+                                    </a>
                                 </li>
                             );
-                        }
-                        ) 
+                        })
                     }
                 </ul>
     },
@@ -95,7 +57,7 @@ export const PrivacyData = [
         title: "本サイト使用プラグイン一覧",
         content: <ul>
                     {
-                        plugin.map((value, key) => {
+                        PrivacyDataPlugin.map((value, key) => {
                             return(
                                 <li key={key}>
                                     <a  target="_blank" 
@@ -115,17 +77,14 @@ export const PrivacyData = [
         content: 
         <ul>
             {
-                outerService.map( (value, key) => {
+                PrivacyDataOuterService.map( (value, key) => {
                     return(
                         <li key={key}>
-                            <a 
-                                href={value.url}
+                            <a  href={value.url}
                                 target="_blank"
-                                rel="noreferrer"
-                            >
+                                rel="noreferrer" >
                                 {value.title}
                             </a>
-                            
                         </li>
                     );
                 }
@@ -138,13 +97,33 @@ export const PrivacyData = [
         content: 
         <ul>
             {
-                referUrl.map( (value, key) => {
+                PrivacyDataReferUrl.map( (value, key) => {
                     return(
                         <li key={key}>
                             {value.type}
-                            <ul key={value.refers}>
-                                <li >{value.refers.title}</li>
-                            </ul>
+                            {
+                                <table>
+                                    {
+                                        value.refers.map((valueIn, keyIn) => {
+                                            return(
+                                                <tr key={keyIn}>
+                                                    <td>
+                                                        <a target="_blank"
+                                                            rel="noreferrer"
+                                                            href={valueIn.url}
+                                                        >
+                                                            {valueIn.title}
+                                                        </a>
+                                                    </td>
+                                                    <td>
+                                                        {valueIn.lastVisit}
+                                                    </td>
+                                                </tr>
+                                            );
+                                        })
+                                    }
+                                </table>
+                            }
                         </li>
                     );
                 }

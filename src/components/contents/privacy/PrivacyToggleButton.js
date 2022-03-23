@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import {VscChevronRight, VscChevronDown} from "react-icons/vsc"
 
 const PrivacyContentDiv = styled.div`
         display: block;
@@ -19,7 +20,7 @@ function PrivacyToggleButton(props){
 
     return(
         <div>
-            <h2 onClick={ () => setChecked(!checked)}><span>{checked ? 'O': 'X'}</span>{props.title}</h2>
+            <h2 onClick={ () => setChecked(!checked)}><span>{checked ? <VscChevronDown/>: <VscChevronRight/>}</span>{props.title}</h2>
             {
                 checked ? <PrivacyContentDiv>{props.content}</PrivacyContentDiv> : "" 
             }
