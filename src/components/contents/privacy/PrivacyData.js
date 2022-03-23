@@ -34,7 +34,6 @@ export const PrivacyData = [
                     <li>本サイトは画面遷移、画面描画、ボタン機能、プラグイン等がJavascriptを使って情報収集を行う場合がございます。</li>
                 </ul>
     },
-    
     {
         title: "本サイト使用素材一覧",
         content: <ul>

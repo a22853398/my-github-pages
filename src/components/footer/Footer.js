@@ -17,7 +17,6 @@ function Footer(){
         <FooterDiv>
             <Copyright />
         </FooterDiv>
-        
     );
 };
 export default Footer;
