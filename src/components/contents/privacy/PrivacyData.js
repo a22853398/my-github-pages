@@ -1,8 +1,5 @@
 import React from "react";
-import PrivacyDataSozai from "./PrivacyDatas/PrivacyDataSozai";
-import PrivacyDataPlugin from "./PrivacyDatas/PrivacyDataPlugin";
-import PrivacyDataOuterService from "./PrivacyDatas/PrivacyDataOuterService";
-import PrivacyDataReferUrl from "./PrivacyDatas/PrivacyDataReferUrl";
+import ContactMailTo from "../contact/ContactMailTo";
 
 export const PrivacyData = [
     {
@@ -10,8 +7,12 @@ export const PrivacyData = [
         content: <ul>
                     <li>駆け出しプログラマーがReactを練習する為、個人で作った、ポートフォリオ的なサイト。</li>
                     <li>イラストレーターに転職したい友人が制作イラストをついでに宣伝します。</li>
-                    <li>ニートの友人が音楽の夢をあきらめ切れない為、友人の駄作をついでに宣伝します。</li>
-                    <li>サイト上全体的に駄目な作品と雑乱のコードが飛び交っています。ご鞭撻のほどよろしくお願い申し上げます。</li>
+                    <li>ニートの友人が音楽の夢をあきらめ切れない為、友人の拙い作品をついでに宣伝します。</li>
+                    <li>サイト上全体的に駄目な作品と雑乱のコードが飛び交っています。ご鞭撻のほどよろしくお願い申し上げます。<br/>
+                        記事掲示の取り消しや修正、制作依頼などがございましたら&ensp;
+                        <ContactMailTo email="u9908028@gmail.com">u9908028@gamil.com</ContactMailTo>
+                        &ensp;にご連絡ください。
+                    </li>
                 </ul>
     },
     {
@@ -34,100 +35,5 @@ export const PrivacyData = [
                     <li>本サイトは画面遷移、画面描画、ボタン機能、プラグイン等がJavascriptを使って情報収集を行う場合がございます。</li>
                 </ul>
     },
-    {
-        title: "本サイト使用素材一覧",
-        content: <ul>
-                    {
-                        PrivacyDataSozai.map((value, key) => {
-                            return(
-                                <li key={key}>
-                                    <a target="_blank"
-                                        rel="noreferrer"
-                                        href={value.url}>
-                                        {value.title}
-                                    </a>
-                                </li>
-                            );
-                        })
-                    }
-                </ul>
-    },
-    {
-        title: "本サイト使用プラグイン一覧",
-        content: <ul>
-                    {
-                        PrivacyDataPlugin.map((value, key) => {
-                            return(
-                                <li key={key}>
-                                    <a  target="_blank" 
-                                        rel="noreferrer" 
-                                        href={value.url}
-                                    >
-                                        {value.title}
-                                    </a>
-                                </li>
-                            );
-                        })
-                    }
-                </ul>
-    },
-    {
-        title: "本サイト使用外部サービス一覧",
-        content: 
-        <ul>
-            {
-                PrivacyDataOuterService.map( (value, key) => {
-                    return(
-                        <li key={key}>
-                            <a  href={value.url}
-                                target="_blank"
-                                rel="noreferrer" >
-                                {value.title}
-                            </a>
-                        </li>
-                    );
-                }
-                )
-            }
-        </ul>
-    },
-    {
-        title: "参考資料一覧",
-        content: 
-        <ul>
-            {
-                PrivacyDataReferUrl.map( (value, key) => {
-                    return(
-                        <li key={key}>
-                            {value.type}
-                            {
-                                <table>
-                                    {
-                                        value.refers.map((valueIn, keyIn) => {
-                                            return(
-                                                <tr key={keyIn}>
-                                                    <td>
-                                                        <a target="_blank"
-                                                            rel="noreferrer"
-                                                            href={valueIn.url}
-                                                        >
-                                                            {valueIn.title}
-                                                        </a>
-                                                    </td>
-                                                    <td>
-                                                        {valueIn.lastVisit}
-                                                    </td>
-                                                </tr>
-                                            );
-                                        })
-                                    }
-                                </table>
-                            }
-                        </li>
-                    );
-                }
-                )
-            }
-        </ul>
-    },
+    
 ]; 

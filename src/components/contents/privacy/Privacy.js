@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { PrivacyData } from "./PrivacyData";
 import PrivacyToggleButton from "./PrivacyToggleButton";
+import { PrivacyReferData } from "./PrivacyReferData";
 
 const PrivacyDiv = styled.div`
     width: auto;
@@ -22,10 +23,24 @@ function Privacy(){
                             title={value.title} 
                             content={value.content}
                             theme={
-                                (key === PrivacyData.length - 1) ? {borderBottom: "0.0px"} : {borderBottom: "0.5px"}
+                                {borderBottom: "0.5px"}
                             }
                         />
                         
+                    );
+                })
+            }
+            {
+                PrivacyReferData.map((value, key) => {
+                    return(
+                        <PrivacyToggleButton 
+                            key={key}
+                            title={value.title}
+                            content={value.content}
+                            theme={
+                                (key === PrivacyReferData.length -1) ? {borderBottom: "0.0px"} : {borderBottom: "0.5px"}
+                            }
+                        />
                     );
                 })
             }
