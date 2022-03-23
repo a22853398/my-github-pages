@@ -8,7 +8,7 @@ import styled from 'styled-components';
 const FormDiv = styled.div(
   {
     border: '0.5px dotted darkgreen',
-    width: '60%',
+    width: 'auto',
     padding: '0% 2% 1% 2%',
     '& label':{
       fontWeight: 'bold',
@@ -18,12 +18,12 @@ const FormDiv = styled.div(
     '& input':{
       margin: '0% 0% 1% 1%',
       fontSize: '1.1rem',
-      width: '95%'
+      width: '97%'
     },
     '& textarea':{
       margin: '0% 0% 1% 1%',
       resize: 'none',
-      width: '95%',
+      width: '97%',
       height: '',
       fontSize: '1.1rem'
     },

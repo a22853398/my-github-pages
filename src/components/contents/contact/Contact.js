@@ -6,8 +6,8 @@ import ContactMailTo from "./ContactMailTo";
 
 const ContactDiv = styled.div(
     {
-        width: '100%',
-        padding: '0% 20% 0% 20%'
+        width: 'auto',
+        padding: '0% 20% 0% 20%',
     }
 );
 

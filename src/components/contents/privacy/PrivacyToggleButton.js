@@ -2,15 +2,15 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import {VscChevronRight, VscChevronDown} from "react-icons/vsc"
 
-const PrivacyContentDiv = styled.div`
-        display: block;
-    `;
+const PrivacyHeaderDiv = styled.div(
+    {
+        
+    }
+);
 
-export const TestTT = () => {
-    <div>
-        TestTT
-    </div>
-} 
+const PrivacyBodyDiv = styled.div``;
+const PrivacyContentDiv = styled.div``;
+
 
 function PrivacyToggleButton(props){
     const [checked, setChecked] = useState(false);
@@ -20,10 +20,14 @@ function PrivacyToggleButton(props){
 
     return(
         <div>
-            <h2 onClick={ () => setChecked(!checked)}><span>{checked ? <VscChevronDown/>: <VscChevronRight/>}</span>{props.title}</h2>
+            <PrivacyHeaderDiv>
+                <h2 onClick={ () => setChecked(!checked)}><span>{checked ? <VscChevronDown/>: <VscChevronRight/>}</span>{props.title}</h2>
+            </PrivacyHeaderDiv>
+            <PrivacyBodyDiv>
             {
-                checked ? <PrivacyContentDiv>{props.content}</PrivacyContentDiv> : "" 
+                checked ? <PrivacyContentDiv>{props.content}</PrivacyContentDiv> : ""
             }
+            </PrivacyBodyDiv>
         </div>
         
     );

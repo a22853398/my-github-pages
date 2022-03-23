@@ -1,10 +1,16 @@
 import React from "react";
+import styled from "styled-components";
 import { PrivacyData } from "./PrivacyData";
 import PrivacyToggleButton from "./PrivacyToggleButton";
 
+const PrivacyDiv = styled.div`
+    width: auto;
+    padding: 0% 20% 0% 20%;
+`;
+
 function Privacy(){
     return(
-        <div>
+        <PrivacyDiv>
             {
                 PrivacyData.map((value, key) => {
                     return(
@@ -12,7 +18,7 @@ function Privacy(){
                     );
                 })
             }
-        </div>
+        </PrivacyDiv>
     );
 }
 export default Privacy;
