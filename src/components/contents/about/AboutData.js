@@ -2,7 +2,8 @@
 export const AboutData = [
     {
         title: "名前",
-        content: "頼威宏。本名ですけど、公開して危なくなくないですか？"
+        content: "頼威宏。本名ですけど、公開して危なくなくないですか？\n"+
+                "束頁（たばけつ）タケヒロ（たけひろ）と化します"
     },
     {
         title: "フリガナ",
@@ -28,6 +29,14 @@ export const AboutData = [
         title: "特技",
         content: "このプロフィールのような無駄な文を書くこと"
     },
+    {
+        title: "夢",
+        content: "いつか名前通りに頼り甲斐のある人になりたい"
+    },
+    {
+        title: "アイドル",
+        content: "《うえきの法則》の植木耕助、《Fate》シリーズの衛宮士郎"
+    }
 ];
 
 export const SelfIntroduction = [
