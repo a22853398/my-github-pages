@@ -1,5 +1,5 @@
 import React from "react";
-import ContactMailTo from "../contact/ContactMailTo";
+import ContactMailTo from "../../reuseAtoms/ContactMailTo";
 
 export const PrivacyData = [
     {

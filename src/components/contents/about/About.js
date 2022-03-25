@@ -7,11 +7,13 @@ import { SponsorMailTo } from "./SponsorMailTo";
 
 const AboutDiv = styled.div(
     {
-        width: '100%',
+        width: '80%',
         display: 'flex',
         flexDirection: 'row',
         alignItems: 'start',
         justifyContent: 'center',
+        border: '1px solid red',
+        margin: 'auto'
     }
 );
 
@@ -20,11 +22,11 @@ const PicDiv = styled.div`
     padding: 1% 0%;
 `;
 const StyledPic = styled.img`
-    height: 500px;
+    height: 600px;
 `;
 const TextDiv = styled.div`
     height: 100%;
-    width: 50%;
+    width: 80%;
 `;
 
 const ProfileDiv = styled.div(

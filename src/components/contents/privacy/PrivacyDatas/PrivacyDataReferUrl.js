@@ -59,7 +59,8 @@
     {
         type: "その他",
         refers: [
-            {title: "【コード品質】綺麗なReactコード 中級 7例", url: "https://qiita.com/JNJDUNK/items/2dbb511e38ddbba038b4", lastVisit:"2022-03-25"}
+            {title: "【コード品質】綺麗なReactコード 中級 7例", url: "https://qiita.com/JNJDUNK/items/2dbb511e38ddbba038b4", lastVisit:"2022-03-25"},
+            {title: "変更に強いコンポーネント設計の方針と規約（Webフロントエンド）", url:"https://buildersbox.corp-sansan.com/entry/2022/01/06/110000", lastVisit: "2022-03-25"}
         ]
     },
 ];

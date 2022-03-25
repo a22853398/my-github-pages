@@ -1,13 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 import ContactForm from "./ContactForm";
-import ContactMailTo from "./ContactMailTo";
+import ContactMailTo from "../../reuseAtoms/ContactMailTo";
 
 
 const ContactDiv = styled.div(
     {
-        width: 'auto',
-        padding: '0% 20% 0% 20%',
+        width: '80%',
+        padding: '0% 0%',
+        border: '1px solid red',
+        margin: 'auto',
     }
 );
 
