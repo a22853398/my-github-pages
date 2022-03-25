@@ -1,17 +1,22 @@
 {
   "files": {
     "main.css": "/my-github-pages/static/css/main.b835a090.css",
-    "main.js": "/my-github-pages/static/js/main.173f1056.js",
+    "main.js": "/my-github-pages/static/js/main.a59bfd33.js",
     "static/js/787.40d092c4.chunk.js": "/my-github-pages/static/js/787.40d092c4.chunk.js",
     "static/media/profile_icon.png": "/my-github-pages/static/media/profile_icon.52ae6ede9c7dd9123893.png",
+    "static/media/ojigi_animal_neko.png": "/my-github-pages/static/media/ojigi_animal_neko.d5ef9b4d5b406c24b3a6.png",
+    "static/media/ojigi_animal_inu.png": "/my-github-pages/static/media/ojigi_animal_inu.081e3644ef83ca6a136b.png",
+    "static/media/ojigi_animal_usagi.png": "/my-github-pages/static/media/ojigi_animal_usagi.0c845a2179de686b1253.png",
+    "static/media/Octocat.jpg": "/my-github-pages/static/media/Octocat.2444c54fd88ae684e5a7.jpg",
     "static/media/profile_pic.jpg": "/my-github-pages/static/media/profile_pic.8051786f171223abad5c.jpg",
+    "static/media/gitlab-icon-rgb.png": "/my-github-pages/static/media/gitlab-icon-rgb.45857c35e6f714b1028e.png",
     "index.html": "/my-github-pages/index.html",
     "main.b835a090.css.map": "/my-github-pages/static/css/main.b835a090.css.map",
-    "main.173f1056.js.map": "/my-github-pages/static/js/main.173f1056.js.map",
+    "main.a59bfd33.js.map": "/my-github-pages/static/js/main.a59bfd33.js.map",
     "787.40d092c4.chunk.js.map": "/my-github-pages/static/js/787.40d092c4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b835a090.css",
-    "static/js/main.173f1056.js"
+    "static/js/main.a59bfd33.js"
   ]
 }
