@@ -52,6 +52,10 @@ const StyledTable = styled.table`
     }
 `;
 
+const StyledUl = styled.ul`
+    list-style: none;
+`;
+
 export const PrivacyReferData = [
     {
         title: "本サイト使用素材一覧",
@@ -145,14 +149,17 @@ export const PrivacyReferData = [
     {
         title: "参考資料一覧",
         content: 
-        <ul>
+        <React.StrictMode>
+        <p>全てではありません。主にお世話になっている記事をここに記入いたしました。<br/>
+        個人で勝手に参考にさせていただいた記事であるため、元記事（動画）への指摘、罵倒、誹謗中傷をお控えください。</p>
+        <StyledUl>
             {
                 PrivacyDataReferUrl.map( (value, key) => {
                     return(
                         <React.StrictMode key={key}>
                         <li>
                             <h3>{value.type}</h3>
-                            <table>
+                            <StyledTable>
                                 <thead>
                                     <tr>
                                         <th>No.</th><th>タイトル</th><th>最終訪問日</th>
@@ -178,16 +185,15 @@ export const PrivacyReferData = [
                                     )
                                 }
                                 </tbody>
-                            </table>
+                            </StyledTable>
                         </li>
-                        
                         </React.StrictMode>
-                    
                     );
                 }
                 )
             }
-        </ul>
+        </StyledUl>
+        </React.StrictMode>
     },
 ];
 
@@ -216,7 +222,6 @@ export const PrivacyReferData = [
                                 </tr>
                             }
  */
-
 /*
 <table>
                             <tr>
