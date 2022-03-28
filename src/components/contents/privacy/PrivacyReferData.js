@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import PrivacyDataSozai from "./privacyDatas/PrivacyDataSozai";
 import PrivacyDataPlugin from "./privacyDatas/PrivacyDataPlugin";
 import PrivacyDataOuterService from "./privacyDatas/PrivacyDataOuterService";
@@ -62,7 +62,7 @@ export const PrivacyReferData = [
         content: <StyledTable>
                     <thead>
                         <tr>
-                            <th>No.</th><th>タイトル</th><th>最後訪問日</th>
+                            <th >No.</th><th>タイトル</th><th>最後訪問日</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -70,7 +70,7 @@ export const PrivacyReferData = [
                         PrivacyDataSozai.map((value, key) => {
                             return(
                                 <tr key={key}>
-                                    <td>{key}</td>
+                                    <td>{value.id}</td>
                                     <td>
                                         <a target="_blank"
                                             rel="noreferrer"
@@ -99,7 +99,7 @@ export const PrivacyReferData = [
                         PrivacyDataPlugin.map((value, key) => {
                             return(
                                 <tr key={key}>
-                                    <td>{key}</td>
+                                    <td>{value.id}</td>
                                     <td>
                                     <a  target="_blank" 
                                         rel="noreferrer" 
@@ -129,7 +129,7 @@ export const PrivacyReferData = [
                 PrivacyDataOuterService.map( (value, key) => {
                     return(
                         <tr key={key}>
-                            <td>{key}</td>
+                            <td>{value.id}</td>
                             <td>
                                 <a  href={value.url}
                                     target="_blank"
@@ -167,10 +167,12 @@ export const PrivacyReferData = [
                                 </thead>
                                 <tbody>
                                 {
+                                    //sort((a, b)=>a.title>b.title ? 1: -1) //ソート機能
+
                                     value.refers.map((valueIn, keyIn) => {
                                         return(
                                             <tr key={keyIn}>
-                                                <td>{keyIn}</td>
+                                                <td >{valueIn.id}</td>
                                                 <td>
                                                     <a href={valueIn.url}
                                                         target="_blank"
