@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import PrivacyDataSozai from "./privacyDatas/PrivacyDataSozai";
-import PrivacyDataPlugin from "./privacyDatas/PrivacyDataPlugin";
-import PrivacyDataOuterService from "./privacyDatas/PrivacyDataOuterService";
-import PrivacyDataReferUrl from "./privacyDatas/PrivacyDataReferUrl";
+import PrivacyDataSozai from "./privacyContent/privacySozai/PrivacyDataSozai";
+import PrivacyDataPlugin from "./privacyContent/privacyPlugin/PrivacyDataPlugin";
+import PrivacyDataOuterService from "./privacyContent/privacyOuterService/PrivacyDataOuterService";
+import PrivacyDataReferUrl from "./privacyContent/privacyRefer/PrivacyDataReferUrl";
 import styled from "styled-components";
 
 const StyledTable = styled.table`
