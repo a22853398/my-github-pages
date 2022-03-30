@@ -1,7 +1,7 @@
 /**
  * 参考している資料
  */
- const PrivacyDataReferUrl = [
+export const PrivacyDataReferUrl = [
     {
         type: "環境設定とインストール",
         refers: [
@@ -46,7 +46,8 @@
         type: "CSS in Javascript",
         refers: [
             { id:1, title: "How can set global font-family using Styled-Components", url: "https://stackoverflow.com/questions/55471613/how-can-set-global-font-family-using-styled-components", lastVisit: "2022-03-23"},
-            { id:2, title: "【React】styled-componentsでCSS in JSを事始める", url: "https://www.i-ryo.com/entry/2020/12/16/052128#%E5%AD%90%E8%A6%81%E7%B4%A0%E3%81%AE%E8%A8%AD%E5%AE%9A", lastVisit: "2022-03-25"}
+            { id:2, title: "【React】styled-componentsでCSS in JSを事始める", url: "https://www.i-ryo.com/entry/2020/12/16/052128#%E5%AD%90%E8%A6%81%E7%B4%A0%E3%81%AE%E8%A8%AD%E5%AE%9A", lastVisit: "2022-03-25"},
+            { id:3, title: "styled-componentsの使い方(パッとわかりやすく、色々なパターンを説明することを目指す記事)", url: "https://gist.github.com/kenmori/60bf7b67819061f41ce960617c035955", lastVisit: "2022-03-30"}
         ]
     },
     {
@@ -65,4 +66,17 @@
     },
 ];
 
-export default PrivacyDataReferUrl;
+export const PrivacyDataReferUrlColumns = [
+    {
+        Header: 'No.',
+        accessor: 'id'
+    },
+    {
+        Header: 'タイトル',
+        accessor: 'title'
+    },
+    {
+        Header: '最終訪問日',
+        accessor: 'lastVisit'
+    },
+];

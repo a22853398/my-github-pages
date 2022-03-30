@@ -5,7 +5,7 @@ import styled from "styled-components";
 const StyledTable = styled.table`
     width: 95%;
     border: 1px solid black;
-    margin: 0% 2% 2% 2%;
+    margin: 0% 2% 0.5% 2%;
     & a, & a:link, & a:visited{
         text-decoration: none;
         color: darkgreen;
@@ -50,7 +50,32 @@ const StyledTable = styled.table`
 `;
 
 const ChangePageButtonDiv = styled.div`
+    width: 95%;
+    margin: 0% 0% 0.5% 0%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    & button{
+      margin: 0 3px;
+      font-weight: bold;
+      border: 1px solid darkgreen;
+      color: white;
+      background: darkgreen;
+    }
+    & button:hover{
+      background: yellowgreen;
+      color:black;
+    }
+    & button:disabled,& button[disabled]{
+      background: rgba(65,100,65, 0.5);
+      color: white;
+    }
+    & span{
+      margin: 0 10px;
+    }
 `;
+
+
 
 function PrivacyPageTable({ columns, data }) {
     // Use the state and functions returned from useTable to build your UI
@@ -120,18 +145,17 @@ function PrivacyPageTable({ columns, data }) {
         <button onClick={() => previousPage()} disabled={!canPreviousPage}>
           {'<'}
         </button>{' '}
+        <span>
+          <strong>
+            {pageIndex + 1} / {pageOptions.length}
+          </strong>{' '}
+        </span>
         <button onClick={() => nextPage()} disabled={!canNextPage}>
           {'>'}
         </button>{' '}
         <button onClick={() => gotoPage(pageCount - 1)} disabled={!canNextPage}>
           {'>>'}
         </button>{' '}
-        <span>
-          Page{' '}
-          <strong>
-            {pageIndex + 1} of {pageOptions.length}
-          </strong>{' '}
-        </span>
       </ChangePageButtonDiv>
     </>
   )
