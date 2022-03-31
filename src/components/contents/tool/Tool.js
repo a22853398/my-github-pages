@@ -1,8 +1,12 @@
 import React from "react";
+import FilterAndSortTest from "../../test/FilterAndSortTest";
 
 function Tool(){
+    
     return (
-        <div>Tool Page</div>
+        <div>
+            <FilterAndSortTest></FilterAndSortTest>
+        </div>
     );
 }
 export default Tool;
