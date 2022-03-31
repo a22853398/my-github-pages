@@ -1,4 +1,4 @@
-
+import CostumNewTargetATag from "../../../../reuseAtoms/CostomNewTargetATag";
 
 /**
  * 使用しているプラグイン
@@ -6,38 +6,44 @@
  export const PrivacyDataPlugin = [
     { 
         id:1, 
-        title: <a href="https://react-icons.github.io/react-icons/" target="_blank" rel="noreferrer">
-            React Icons</a>, 
+        title: <CostumNewTargetATag 
+            url="https://react-icons.github.io/react-icons/" 
+            text="React Icons"/>, 
         lastVisit:"2022-03-23"
     },
     { 
         id:2, 
-        title: <a href="https://reactrouter.com/docs/en/v6/getting-started/overview" target="_blank"  rel="noreferrer">
-            React Router v6</a>, 
+        title: <CostumNewTargetATag 
+            url="https://reactrouter.com/docs/en/v6/getting-started/overview" 
+            text="React Router v6" />, 
         lastVisit:"2022-03-23"
     },
     { 
         id:3, 
-        title: <a href="https://styled-components.com/" target="_blank" rel="noreferrer">
-            styled-components</a>, 
+        title: <CostumNewTargetATag 
+            url="https://styled-components.com/" 
+            text="styled-components" />, 
         lastVisit:"2022-03-23"
     },
     { 
         id:4, 
-        title: <a href="https://www.npmjs.com/package/gh-pages" target="_blank" rel="noreferrer">
-            gh-pages</a>, 
+        title: <CostumNewTargetATag 
+            url="https://www.npmjs.com/package/gh-pages" 
+            text="gh-pages"/>, 
         lastVisit:"2022-03-23"
     },
     { 
         id:5, 
-        title: <a href="https://www.npmjs.com/package/react-google-recaptcha" target="_blank" rel="noreferrer">
-            react-google-recaptcha v2</a>, 
+        title: <CostumNewTargetATag 
+            url="https://www.npmjs.com/package/react-google-recaptcha" 
+            text="react-google-recaptcha v2"/>, 
         lastVisit:"2022-03-23"
     },
     { 
         id:6, 
-        title: <a href="https://react-table.tanstack.com/" target="_blank" rel="noreferrer">
-            react-table</a>, 
+        title: <CostumNewTargetATag 
+            url="https://react-table.tanstack.com/" 
+            text="react-table"/>, 
         lastVisit:"2022-03-29"
     },
 ];

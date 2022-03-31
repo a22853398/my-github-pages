@@ -1,17 +1,20 @@
+import CostumNewTargetATag from "../../../../reuseAtoms/CostomNewTargetATag";
 /**
  * 使用している外部サービス
  */
 export const PrivacyDataOuterService = [
     { 
         id:1, 
-        title: <a href="https://www.google.com/recaptcha/about/" target="_blank" rel="noreferrer">
-            Google Recaptcha v2</a>,  
+        title: <CostumNewTargetATag 
+            url="https://www.google.com/recaptcha/about/" 
+            text="Google Recaptcha v2" />,  
         lastVisit: "2022-03-24"
     },
     { 
         id:2, 
-        title: <a href="https://formspree.io/" target="_blank" rel="noreferrer">
-            formspree</a>, 
+        title: <CostumNewTargetATag 
+            url="https://formspree.io/" 
+            text="formspree" />, 
         lastVisit:"2022-03-25"
     },
 ]; 

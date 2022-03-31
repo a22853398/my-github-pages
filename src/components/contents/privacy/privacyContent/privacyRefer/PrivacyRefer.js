@@ -1,31 +1,24 @@
 import React from "react";
 import PrivacyPageTable from "../../PrivacyPageTable";
-import {PrivacyDataReferUrl, PrivacyDataReferUrlColumns} from "./PrivacyDataReferUrl";
+import { PrivacyDataReferUrl, PrivacyDataReferUrlColumns } from "./PrivacyDataReferUrl";
 import PrivacyToggleButtonRefer from "../../PrivacyToggleButtonRefer";
-import styled from "styled-components";
 
 
-    
-        
-
-function PrivacyRefer(){
-    return(
+function PrivacyRefer() {
+    return (
         <React.StrictMode>
             {
                 PrivacyDataReferUrl.map(
                     (value, key) => {
-                        return(
-                            <PrivacyToggleButtonRefer 
+                        return (
+                            <PrivacyToggleButtonRefer
                                 key={key}
-                                title={value.type} 
+                                title={value.type}
                                 content={
-                                    value.refers.map(
-                                        (valueIn, keyIn) => {
-                                            return(
-                                                <p>{keyIn}</p>
-                                            );
-                                        }
-                                    )
+                                    <PrivacyPageTable 
+                                        data={value.refers}
+                                        columns={PrivacyDataReferUrlColumns}
+                                    />
                                 }
                             />
                         );

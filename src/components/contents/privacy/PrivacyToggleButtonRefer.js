@@ -4,8 +4,7 @@ import {VscChevronRight, VscChevronDown} from "react-icons/vsc"
 
 const PrivacyToggleButtonReferDiv = styled.div(
     {
-        border: '1px solid red',
-        margin: '0% 0% 0% 2%'
+        margin: '0% 0% 0% 2%',
     }
 );
 
@@ -22,12 +21,18 @@ const PrivacyHeaderDiv = styled.div(
         },
         '& h3:hover':{
             color: 'rgba(40, 180, 40 ,0.7)'
-        }
+        },
+        margin: '0% 0% 1% 1%',
+        lineHeight: '1.5rem'
     }
 );
-
+/*
 const PrivacyBodyDiv = styled.div`
     border-bottom: ${props=> props.theme.borderBottom} solid darkgreen;
+`;
+*/
+const PrivacyBodyDiv = styled.div`
+    
 `;
 const PrivacyContentDiv = styled.div`
     
@@ -45,7 +50,7 @@ function PrivacyToggleButtonRefer(props){
             <PrivacyHeaderDiv>
                 <h3 onClick={ () => setChecked(!checked)}>{checked ? <VscChevronDown/>: <VscChevronRight/>}{props.title}</h3>
             </PrivacyHeaderDiv>
-            <PrivacyBodyDiv theme={props.theme}>
+            <PrivacyBodyDiv>
             {
                 checked ? <PrivacyContentDiv>{props.content}</PrivacyContentDiv> : ""
             }

@@ -1,40 +1,46 @@
-
+import CostumNewTargetATag from "../../../../reuseAtoms/CostomNewTargetATag";
 /**
  * 使用した素材
  */
 export const PrivacyDataSozai = [
     {   
         id:1, 
-        title: <a href="#" target="_blank" rel="noreferrer">
-            自作イラスト</a>, 
+        title: <CostumNewTargetATag 
+            url="#" 
+            text="自作イラスト"/>, 
         lastVisit:"2022-03-29"},
     { 
         id:2, 
-        title: <a href="https://icon-icons.com/icon/gitlab-original-logo/146503" target="_blank" rel="noreferrer">
-            gitlab icon</a>, 
+        title: <CostumNewTargetATag 
+            url="https://icon-icons.com/icon/gitlab-original-logo/146503" 
+            text="gitlab icon" />, 
         lastVisit:"2022-03-25"},
     { 
         id:3, 
-        title: <a href="https://pngimg.com/image/73422" target="_blank" rel="noreferrer">
-            github icon</a>, 
+        title: <CostumNewTargetATag 
+            url="https://pngimg.com/image/73422" 
+            text="github icon" />, 
         lastVisit:"2022-03-25"
     },
     { 
         id:4, 
-        title: <a href="https://about.gitlab.com/press/press-kit/" target="_blank" rel="noreferrer">
-            gitlab logo</a>, 
+        title: <CostumNewTargetATag 
+            url="https://about.gitlab.com/press/press-kit/" 
+            text="gitlab logo" />, 
         lastVisit: "2022-03-25"
     },
     { 
         id:5, 
-        title: <a href="https://github.com/logos" target="_blank" rel="noreferrer">
-            github logo</a>, 
+        title: <CostumNewTargetATag 
+            url="https://github.com/logos" 
+            text="github logo" />, 
         lastVisit:"2022-03-25"
     },
     { 
         id:6, 
-        title: <a href="https://www.irasutoya.com/" target="_blank" rel="noreferrer">
-            いらすとや</a>, 
+        title: <CostumNewTargetATag 
+            url="https://www.irasutoya.com/" 
+            text="いらすとや" />, 
         lastVisit:"2022-03-29"
     }
 ];
