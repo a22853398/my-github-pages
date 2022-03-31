@@ -4,6 +4,7 @@ import React from 'react';
 import { useForm, ValidationError } from '@formspree/react';
 import Recaptcha from 'react-google-recaptcha';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const FormDiv = styled.div(
   {
@@ -131,9 +132,11 @@ function ContactForm() {
           <Recaptcha sitekey={mystiekey} onChange={onMyChange}/>
         </RecaptchaDiv>
         <SubmitBtnDiv>
-          <button type='button' >  
-            プライバシーポリシー
-          </button>
+          <Link to="/privacy">
+            <button type='button'>  
+              プライバシーポリシー
+            </button>
+          </Link>
           <button type="submit" disabled={state.submitting}>
             内容を送信
           </button>

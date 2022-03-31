@@ -12,7 +12,6 @@ const AboutDiv = styled.div(
         flexDirection: 'row',
         alignItems: 'start',
         justifyContent: 'center',
-        border: '1px solid red',
         margin: 'auto'
     }
 );

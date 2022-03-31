@@ -8,7 +8,6 @@ const ContactDiv = styled.div(
     {
         width: '80%',
         padding: '0% 0%',
-        border: '1px solid red',
         margin: 'auto',
     }
 );
