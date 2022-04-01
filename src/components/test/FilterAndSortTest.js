@@ -49,7 +49,8 @@ const [filterQuery, setFilterQuery] = useState({});
 // ソート条件
 const [sort, setSort] = useState({});
 
-const filteredTask = useMemo(() => {
+const filteredTask = useMemo(
+    () => {
     let tmpTasks = tasks;
  
     // 入力した文字は小文字にする
