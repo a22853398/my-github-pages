@@ -262,6 +262,12 @@ const filterAndSort = [
         title: <CostomNewTargetATag url="https://www.webopixel.net/javascript/1533.html"
             text="React Hooks でリストの絞り込み検索と並び替え機能のサンプル"/>,
         lastVisit: "2022-03-31"    
+    },
+    {
+        id:2,
+        title: <CostomNewTargetATag url="https://www.postgresql.jp/document/9.4/html/sql.html"
+            text="PostgreSQL 9.4.5文書"/>,
+        lastVisit: "2022-04-01"
     }
 ];
 
@@ -304,6 +310,10 @@ export const PrivacyDataReferUrl = [
     {
         type: "基礎",
         refers: basicRefer
+    },
+    {
+        type: "フィルターとソード",
+        refers: filterAndSort
     }
 ];
 

@@ -1,36 +1,49 @@
 import React, {useMemo, useState} from "react";
+import {sortData, categoryArray} from "./FilterAndSortTestData";
 
 function FilterAndSortTest(){
+    /* tasksのカテゴリは数字でなければならない。なぜかと言うと、そのintで下のカテゴリの配列のidとマッチングするから
     const initialState = {
-        tasks: [
+        tasks: 
+        [
             {
                 id: 1,
                 title: '最初のタスク',
                 category: 1
-            },{
+            },
+            {
                 id: 2,
                 title: '2番目のタスク',
                 category: 2
-            },{
+            },
+            {
                 id: 3,
                 title: '3番目のタスク',
                 category: 1
-            }
+            },
+            {
+                id: 4,
+                title: "文系の悲しみ",
+                category: 2
+            },
         ],
         categories: [
             {
                 id: 1,
                 title: 'カテゴリー1'
-            },{
+            },
+            {
                 id: 2,
                 title: 'カテゴリー2'
             }
         ]
     };
+    */
+    
     // タスク
-const [tasks, setTasks] = useState(initialState.tasks);
+const [tasks, setTasks] = useState(sortData);
 // カテゴリー
-const [categories, setCategories] = useState(initialState.categories);
+const [categories, setCategories] = useState(categoryArray);
 // 検索条件
 const [filterQuery, setFilterQuery] = useState({});
 // ソート条件
@@ -44,20 +57,12 @@ const filteredTask = useMemo(() => {
  
     // 絞り込み検索
     tmpTasks = tmpTasks.filter(row => {
- 
         // タイトルで絞り込み
-        if (
-            filterQuery.title &&
-            String(row.title).toLowerCase().indexOf(filterTitle) === -1
-        ) {
+        if ( filterQuery.title && String(row.title).toLowerCase().indexOf(filterTitle) === -1) {
             return false;
         }
- 
         // カテゴリーで絞り込み
-        if (
-            filterQuery.category_id &&
-            row.category !== parseInt(filterQuery.category_id)
-        ) {
+        if ( filterQuery.category_id && row.category !== parseInt(filterQuery.category_id) ) {
             return false;
         }
         return row;
@@ -71,7 +76,6 @@ const filteredTask = useMemo(() => {
             return (a === b ? 0 : a > b ? 1 : -1) * sort.order;
         });
     }
- 
     return tmpTasks;
 }, [filterQuery, sort, tasks]);
 
@@ -136,20 +140,22 @@ const handleSort = column => {
             </thead>
             <tbody>
             {
-                filteredTask.map((task) => {
-                    return(
-                        <tr key={task.id}>
-                            <td>{task.id}</td>
-                            <td>{task.title}</td>
-                            <td>
-                            {
-                                task.category ?
-                                categories.find(c => c.id === task.category).title : ''
-                            }
-                            </td>
-                        </tr>
-                    );
-                })
+                filteredTask.map(
+                    (task) => {
+                        return(
+                            <tr key={task.id}>
+                                <td>{task.id}</td>
+                                <td>{task.title}</td>
+                                <td>
+                                {
+                                    task.category ?
+                                    categories.find(c => c.id === task.category).title : ''
+                                }
+                                </td>
+                            </tr>
+                        );
+                    }
+                )
             }
             </tbody>
         </table>
