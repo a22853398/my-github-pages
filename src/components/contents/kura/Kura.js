@@ -1,7 +1,10 @@
 import React, { useMemo, useState } from "react";
 import styled from "styled-components";
-import ProjectUnit from "../../reuseAtoms/projectUnit/ProjectUnit";
+import ProjectUnit from "./projectUnit/ProjectUnit";
 import { ProjectDatas } from "./kuraDatas/ProjectDatas";
+
+import KuraFilter from "./KuraFilter";
+
 
 import koujiDog from "../../../images/ojigi_animal_inu.png";
 import koujiCat from "../../../images/ojigi_animal_neko.png";
@@ -32,25 +35,40 @@ const ProjectUnitDiv = styled.div(
 
 
 function Kura() {
-    
-
     /**タイトルがない時の表記 */
-    const notitle = "コードが公開していない\nまたは作品がない";
-    /**期間がない時の表記　*/
-
-    /**使用言語がない時の表記 */
-
-    /**デプロイがない時の表記 */
-
+    const notitle = "まだ作品がありません";
     /**画像がない時の初期表記 */
     const koujiArray = [koujiDog, koujiCat, koujiRabbit];
+    
     return (
         <KuraDiv>
             <FilterDiv>
-                
+                <KuraFilter />
             </FilterDiv>
             <ProjectUnitDiv>
                 {
+                    ProjectDatas.map((value, key)=>{
+                        return(
+                            <ProjectUnit 
+                                key={key}    
+                                title={(value.title === "") ? notitle : value.title}
+                                date={value.date}
+                                lang={value.lang}
+                                phase={value.phase}
+                                src={(value.src === "") ? koujiArray[key % koujiArray.length] : value.src}
+                                url={(value.url === "") ? "" : value.url}
+                            />
+                        );
+                    })
+                }
+            </ProjectUnitDiv>
+        </KuraDiv>
+    );
+}
+export default Kura;
+
+/**
+ * {
                     ProjectDatas.map((value, key) => {
                         return (
                             <ProjectUnit
@@ -65,8 +83,15 @@ function Kura() {
                         );
                     })
                 }
-            </ProjectUnitDiv>
-        </KuraDiv>
-    );
-}
-export default Kura;
+ */
+
+// /**タイトルがない時の表記 */
+// const notitle = "コードが公開していない\nまたは作品がない";
+// /**期間がない時の表記　*/
+// const notime = "時期があやふやのプロジェクトです";
+// /**使用言語がない時の表記 */
+// const nolanguage = "使用言語まだ記入していない";
+// /**デプロイがない時の表記 */
+// const nodeploy = "公開していないプロジェクト";
+// /**画像がない時の初期表記 */
+// const koujiArray = [koujiDog, koujiCat, koujiRabbit];

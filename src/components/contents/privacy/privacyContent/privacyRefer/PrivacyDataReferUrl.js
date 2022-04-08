@@ -26,7 +26,7 @@ const installAndSetting =[
         lastVisit:"2022-03-25"
     },
     {
-        id: 1, 
+        id: 4, 
         title: <CostomNewTargetATag 
             url="https://ja.reactjs.org/tutorial/tutorial.html"
             text="チュートリアル：React の導入"/>, 
@@ -268,6 +268,18 @@ const filterAndSort = [
         title: <CostomNewTargetATag url="https://www.postgresql.jp/document/9.4/html/sql.html"
             text="PostgreSQL 9.4.5文書"/>,
         lastVisit: "2022-04-01"
+    },
+    {
+        id:3,
+        title: <CostomNewTargetATag url="https://codepen.io/nregard/pen/KGbvoG"
+            text="React filter Tag Input - CodePen"/>,
+        lastVisit: "2022-04-08"    
+    },
+    {
+        id:4,
+        title: <CostomNewTargetATag url="https://ja.visual-foxpro-programmer.com/easier-way-disable-link-react"
+            text="Reactでリンクを無効にする簡単な方法は？"/>,
+        lastVisit: "2022-04-08"
     }
 ];
 
