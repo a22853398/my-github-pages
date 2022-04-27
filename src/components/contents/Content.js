@@ -5,7 +5,7 @@ import About from "./about/About";
 import Contact from "./contact/Contact";
 import Tool from "./tool/Tool";
 import Kura from "./kura/Kura";
-
+import Privacy from "./privacy/Privacy";
 
 
 function Content(){
@@ -17,6 +17,7 @@ function Content(){
                 <Route exact path="/contact" element={<Contact />}/>
                 <Route exact path="/tool" element={<Tool />}/>
                 <Route exact path="/kura" element={<Kura />}/>
+                <Route exact path="/privacy" element={<Privacy/>}/>
             </Routes>
         </div>
     );

@@ -7,22 +7,25 @@ import { SponsorMailTo } from "./SponsorMailTo";
 
 const AboutDiv = styled.div(
     {
+        width: '80%',
         display: 'flex',
         flexDirection: 'row',
         alignItems: 'start',
         justifyContent: 'center',
-        width: '100%',
+        margin: 'auto'
     }
 );
+
+
 const PicDiv = styled.div`
     padding: 1% 0%;
 `;
 const StyledPic = styled.img`
-    height: 500px;
+    height: 600px;
 `;
 const TextDiv = styled.div`
     height: 100%;
-    width: 50%;
+    width: 80%;
 `;
 
 const ProfileDiv = styled.div(
@@ -90,10 +93,10 @@ function About(){
                 <SupportDiv>
                     <p>画像は&ensp;
                         <SponsorMailTo email="robertchianing0534@gmail.com">robertchianing0534@gmail.com</SponsorMailTo>
-                        &ensp;の方が描いてくれました<br/>
+                        &ensp;の方が描いてくれました。<br/>
                         イラスト制作依頼は
                         <SponsorMailTo email="robertchianing0534@gmail.com">そちら</SponsorMailTo>
-                        にご連絡ください
+                        にご連絡ください。
                     </p>
                 </SupportDiv>
             </TextDiv>

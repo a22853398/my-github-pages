@@ -2,6 +2,7 @@ import React from "react";
 import {AiOutlineHome, AiOutlineTool, AiOutlineMail} from "react-icons/ai";
 import {BiBuilding} from "react-icons/bi";
 import {CgProfile} from "react-icons/cg";
+import {BsExclamationDiamond} from "react-icons/bs"; 
 
 export const NavbarData = [
     {
@@ -15,7 +16,7 @@ export const NavbarData = [
         url: '/tool'
     },
     {
-        title: '保管庫',
+        title: 'コード置き場',
         icon: <BiBuilding />,
         url: '/kura'
     },
@@ -29,6 +30,11 @@ export const NavbarData = [
         icon: <AiOutlineMail />,
         url: '/contact'
     },
+    {
+        title: 'プライバシー',
+        icon: <BsExclamationDiamond />,
+        url:'/privacy'
+    }
 ];
 
 
