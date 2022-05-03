@@ -2,6 +2,11 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import {VscChevronRight, VscChevronDown} from "react-icons/vsc"
 
+const PrivacyUnitDiv = styled.div(
+    {
+        margin: '2% 0%',
+    }
+);
 const PrivacyHeaderDiv = styled.div(
     {
         '& h2':{
@@ -34,7 +39,7 @@ function PrivacyToggleButton(props){
     //useState() -> React Hook 関数
 
     return(
-        <div>
+        <PrivacyUnitDiv>
             <PrivacyHeaderDiv>
                 <h2 onClick={ () => setChecked(!checked)}>{checked ? <VscChevronDown/>: <VscChevronRight/>}{props.title}</h2>
             </PrivacyHeaderDiv>
@@ -43,7 +48,7 @@ function PrivacyToggleButton(props){
                 checked ? <PrivacyContentDiv>{props.content}</PrivacyContentDiv> : ""
             }
             </PrivacyBodyDiv>
-        </div>
+        </PrivacyUnitDiv>
     );
 }
 export default PrivacyToggleButton;

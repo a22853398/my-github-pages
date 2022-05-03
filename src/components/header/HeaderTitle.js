@@ -3,9 +3,10 @@ import styled from "styled-components";
 
 const TitleText = styled.h1(
     {
-        fontSize: '2rem',
+        //fontSize: '2rem',
         color: 'darkgreen',
-        cursor: 'pointer'
+        //cursor: 'pointer',
+        padding: '0% 0%'
     }
 );
 
