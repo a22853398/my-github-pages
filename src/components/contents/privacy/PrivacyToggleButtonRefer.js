@@ -4,7 +4,7 @@ import {VscChevronRight, VscChevronDown} from "react-icons/vsc"
 
 const PrivacyToggleButtonReferDiv = styled.div(
     {
-        margin: '0% 0% 0% 2%',
+        margin: '2% 0% 2% 2%',
     }
 );
 

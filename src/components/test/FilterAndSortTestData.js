@@ -18,7 +18,7 @@ export const sortData = [
     },
     {
         id: 4,
-        title: "文系の悲しみ",
+        title: "文系、理系、体育系",
         category: 6
     },
     {
@@ -58,7 +58,7 @@ export const sortData = [
     },
     {
         id: 12,
-        title: "PostgreSQLは地味ながら、結構普及されている",
+        title: "PostgreSQLは普及されている",
         category: 9
     },
     {
@@ -73,32 +73,32 @@ export const sortData = [
     },
     {
         id: 15,
-        title: "理系やっぱり良いわ。就職の幅が広い",
+        title: "Go言語はGoogle社が開発した言語",
         category: 1
     },
     {
         id: 16,
-        title: "それと引き換え、文系は地味で餓死しそう",
+        title: "Go言語は「；」がない、Pythonのように",
         category: 2
     },
     {
         id: 17,
-        title: "道理で今、文系エンジニアが溢れ出す",
+        title: "#駆け出しエンジニアと繋がりたい",
         category: 6
     },
     {
         id: 18,
-        title: "誰も欲しくないでしょう。能無しの文系駆け出しエンジニア",
+        title: "駆け出しだから、謙虚であるべき",
         category: 6
     },
     {
         id: 19,
-        title: "四月は君の嘘記念日",
+        title: "四月は「四月は君の嘘」記念日",
         category: 6
     },
     {
         id: 20,
-        title: "悲しみのアラサー、文系、駆け出し",
+        title: "アラサーでも健気に生きていきたいと思います",
         category: 6
     },
 ];
