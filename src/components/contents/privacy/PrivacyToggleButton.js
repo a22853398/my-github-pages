@@ -4,7 +4,7 @@ import {VscChevronRight, VscChevronDown} from "react-icons/vsc"
 
 const PrivacyUnitDiv = styled.div(
     {
-        margin: '2% 0%',
+        margin: '30px 0%',
     }
 );
 const PrivacyHeaderDiv = styled.div(
@@ -15,7 +15,7 @@ const PrivacyHeaderDiv = styled.div(
             justifyContent: 'start',
             alignItems: 'center',
             verticalAlign: 'middle',
-
+            fontWeight: 'bold',
             cursor: 'pointer'
         },
         '& h2:hover':{

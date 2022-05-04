@@ -6,7 +6,8 @@ const TitleText = styled.h1(
         //fontSize: '2rem',
         color: 'darkgreen',
         //cursor: 'pointer',
-        padding: '0% 0%'
+        padding: '2% 0% 0 0',
+        fontWeight: 'bold'
     }
 );
 

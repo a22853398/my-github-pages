@@ -8,6 +8,8 @@ const NavbarNav = styled.nav(
         backgroundColor: 'yellowgreen',
         userSelect: 'none',
         width: '100%',
+        position: 'sticky',
+        top: '0'
     }
 );
 

@@ -46,6 +46,13 @@ import CostumNewTargetATag from "../../../../reuseAtoms/CostomNewTargetATag";
             text="react-table"/>, 
         lastVisit:"2022-03-29"
     },
+    {
+        id:7,
+        title: <CostumNewTargetATag
+            url="https://react-bootstrap.github.io/"
+            text="react-bootstrap" />,
+        lastVisit:"2022-05-04"    
+    }
 ];
 
 export const PrivacyDataPluginColumns = [

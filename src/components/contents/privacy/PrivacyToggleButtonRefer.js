@@ -4,7 +4,7 @@ import {VscChevronRight, VscChevronDown} from "react-icons/vsc"
 
 const PrivacyToggleButtonReferDiv = styled.div(
     {
-        margin: '2% 0% 2% 2%',
+        margin: '20px 0% 20px 20px',
     }
 );
 
@@ -16,8 +16,8 @@ const PrivacyHeaderDiv = styled.div(
             justifyContent: 'start',
             alignItems: 'center',
             verticalAlign: 'middle',
-
-            cursor: 'pointer'
+            fontWeight: 'bold',
+            cursor: 'pointer',
         },
         '& h3:hover':{
             color: 'rgba(40, 180, 40 ,0.7)'
@@ -32,7 +32,7 @@ const PrivacyBodyDiv = styled.div`
 `;
 */
 const PrivacyBodyDiv = styled.div`
-    
+
 `;
 const PrivacyContentDiv = styled.div`
     
