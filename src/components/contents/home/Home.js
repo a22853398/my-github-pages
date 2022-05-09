@@ -1,9 +1,11 @@
 import React from "react";
-import { Button, Col, Container, Row, Card, Carousel } from "react-bootstrap";
+import { Col, Button, Container, Row, Card, Carousel } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';//この行
 import styled, { keyframes } from "styled-components";
 import profileIcon from "../../../images/ojigi_animal_inu.png";
-import { QuickAccessData } from "./QuickAccessData";
+import { QuickAccessData } from "./quickAccess/QuickAccessData";
+import QuickAccess from "./quickAccess/QuickAccess";
+import News from "./news/News";
 
 const colorChangeText = keyframes`
     0% { color: red; }
@@ -30,21 +32,14 @@ const MemoDiv = styled.div`
 const InfoDiv = styled.div`
     text-align: center;
     padding: 20px 10px 10px 10px;
-    border: 1px solid black;
-`;
-const QuickAccessDiv = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: scretch;
     box-sizing: border-box;
-    flex-wrap: wrap; /*改行*/
+    & h2 {
+        font-weight: bold;
+    }
 `;
-const StyledCard = styled(Card)`
-    background: grey;
-    width: 40%;
-    margin: 10px 25px 10px 25px;
-    display: inline-block;
-`;
+
+
+
 
 
 function Home() {
@@ -53,28 +48,10 @@ function Home() {
             <Container>
                 <Row>
                     <Col>
-                        <InfoDiv>
-                            <h2>最新情報</h2>
-                        </InfoDiv>
+                        <QuickAccess></QuickAccess>
                     </Col>
                     <Col>
-                        <InfoDiv>
-                            <h2>クイックアクセス</h2>
-                            <QuickAccessDiv>
-                                {
-                                    QuickAccessData.map((value, key) => {
-                                        return(
-                                            <StyledCard key={key}>
-                                                <Card.Img variant="top" src={value.icon} />
-                                                <Card.Body>
-                                                    <Button variant="primary">{value.title}</Button>
-                                                </Card.Body>
-                                            </StyledCard>
-                                        );
-                                    })
-                                }
-                            </QuickAccessDiv>
-                        </InfoDiv>
+                        
                     </Col>
                 </Row>
                 <Row>
