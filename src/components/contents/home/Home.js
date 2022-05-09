@@ -37,10 +37,12 @@ const QuickAccessDiv = styled.div`
     justify-content: center;
     align-items: scretch;
     box-sizing: border-box;
+    flex-wrap: wrap; /*改行*/
 `;
 const StyledCard = styled(Card)`
     background: grey;
-    width: 30%;
+    width: 40%;
+    margin: 10px 25px 10px 25px;
     display: inline-block;
 `;
 
