@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { NewsData } from "./NewsData";
 
 const InfoDiv = styled.div`
     text-align: center;
@@ -9,10 +10,27 @@ const InfoDiv = styled.div`
         font-weight: bold;
     }
 `;
+const ContentDiv = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: scretch;
+    box-sizing: border-box;
+    flex-wrap: wrap; /*改行*/
+    border: 1px dotted silver;
+`;
 
 function News(){
     return(
-        <div></div>
+        <InfoDiv>
+            <h2>最新情報</h2>
+            <ContentDiv>
+            {
+                NewsData.map((value, key) => {
+                    
+                })
+            }
+            </ContentDiv>
+        </InfoDiv>
     );
 }
 export default News;

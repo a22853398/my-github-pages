@@ -51,7 +51,7 @@ function Home() {
                         <QuickAccess></QuickAccess>
                     </Col>
                     <Col>
-                        
+                        <News></News>
                     </Col>
                 </Row>
                 <Row>
